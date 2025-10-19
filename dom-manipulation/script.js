@@ -126,7 +126,7 @@ async function syncQuotes() {
   quotes = combined;
   localStorage.setItem('quotes', JSON.stringify(quotes));
 
-  notifyUser("🔄 Quotes synced with server successfully!");
+  notifyUser("Quotes synced with server!");
   displayQuotes();
   populateCategories();
 }
