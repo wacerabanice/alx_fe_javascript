@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // === Display Quotes ===
-function displayQuotes() {
+function showRandomQuote() {
   const selectedCategory = localStorage.getItem('selectedCategory') || 'all';
   const filteredQuotes = selectedCategory === 'all'
     ? quotes
@@ -75,7 +75,7 @@ function addQuote(event) {
   localStorage.setItem('quotes', JSON.stringify(quotes));
 
   populateCategories();
-  displayQuotes();
+  showRandomQuote();
   addQuoteForm.reset();
 
   // Simulate sending new quote to server
